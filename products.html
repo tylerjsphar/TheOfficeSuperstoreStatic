@@ -73,17 +73,18 @@
             <fieldset class="fields">
                 <p>Are you sure you wish to delete the following product?</p>
                 <label>ID:</label> <span id="deleteProductID"></span>
-                <label>Product Name:</label> <span id="deleteProductName"></span>
-                <label>Description:</label> <span id="deleteProductDescription"></span>
-                <label>Unit Price:</label> <span id="deleteProductUnitPrice"></span>
-                <label>Quantity in Stock:</label> <span id="deleteProductQuantityInStock"></span>
-                <label>Supplier ID:</label> <span id="deleteProductSupplierID"></span>
-                <label>Category ID:</label> <span id="deleteProductCategoryID"></span>
+                <label>Product Name:</label> <input type="text" id="deleteProductName">
+                <label>Description:</label> <input type="text" id="deleteProductDescription">
+                <label>Unit Price:</label> <input type="text" id="deleteProductUnitPrice">
+                <label>Quantity in Stock:</label> <input type="text" id="deleteProductQuantityInStock">
+                <label>Supplier ID:</label> <input type="text" id="deleteProductSupplierID">
+                <label>Category ID:</label> <input type="text" id="deleteProductCategoryID">
             </fieldset>
             <input class="btn" type="submit" id="deleteProduct" value="Delete Product">
             <input class="btn" type="button" value="Cancel" onclick="cancelDeleteProduct()">
         </form>
     </div><!-- delete -->
+    
     
 
 </body>
