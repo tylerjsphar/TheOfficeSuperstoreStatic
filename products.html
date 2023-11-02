@@ -67,5 +67,24 @@
         </form> <!-- add new product -->
     </div><!-- insert -->
 
+    <div id="delete" style="display: block">
+        <form id="deleteProduct">
+            <legend><strong>Delete Product</strong></legend>
+            <fieldset class="fields">
+                <p>Are you sure you wish to delete the following product?</p>
+                <label>ID:</label> <span id="deleteProductID"></span>
+                <label>Product Name:</label> <span id="deleteProductName"></span>
+                <label>Description:</label> <span id="deleteProductDescription"></span>
+                <label>Unit Price:</label> <span id="deleteProductUnitPrice"></span>
+                <label>Quantity in Stock:</label> <span id="deleteProductQuantityInStock"></span>
+                <label>Supplier ID:</label> <span id="deleteProductSupplierID"></span>
+                <label>Category ID:</label> <span id="deleteProductCategoryID"></span>
+            </fieldset>
+            <input class="btn" type="submit" id="deleteProduct" value="Delete Product">
+            <input class="btn" type="button" value="Cancel" onclick="cancelDeleteProduct()">
+        </form>
+    </div><!-- delete -->
+    
+
 </body>
 </html>
