@@ -13,8 +13,15 @@ SELECT * FROM Products WHERE productID = :productID;
 INSERT INTO Customers(firstName, lastName, email, phone, address)
 VALUES (:firstName, :lastName, :email, :phone, :address);
 
--- SELECT
-SELECT * FROM Customers WHERE customerID = :customerID;
+-- SELECT including search feature
+SELECT * FROM Customers
+WHERE
+    (:searchKeyword IS NULL OR
+    (LOWER(firstName) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
+    LOWER(lastName) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
+    LOWER(email) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
+    LOWER(phone) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
+    LOWER(address) LIKE CONCAT('%', LOWER(:searchKeyword), '%')));
 
 -- No DELETE or UPDATE operations provided for Customers.
 
