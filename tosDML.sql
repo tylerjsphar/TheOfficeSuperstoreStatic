@@ -6,7 +6,10 @@ VALUES (:productName, :description, :unitPrice, :quantityInStock, :supplierID, :
 -- SELECT
 SELECT * FROM Products WHERE productID = :productID;
 
--- No DELETE or UPDATE operation provided for Products.
+-- DELETE
+-- Delete a product and related entries in ProductSales(on delete CASCADE in ProductSales)
+DELETE FROM Products
+WHERE productID = :productID;
 
 -- Customers
 -- CREATE
@@ -23,7 +26,12 @@ WHERE
     LOWER(phone) LIKE CONCAT('%', LOWER(:searchKeyword), '%') OR
     LOWER(address) LIKE CONCAT('%', LOWER(:searchKeyword), '%')));
 
--- No DELETE or UPDATE operations provided for Customers.
+
+-- UPDATE
+-- Update a customer
+UPDATE Customers
+SET firstName = :firstName, lastName = :lastName, email = :email, phone = :phone, address = :address
+WHERE customerID = :customerID;
 
 -- SalesOrders
 -- CREATE
@@ -53,13 +61,7 @@ VALUES (:productID, :orderID, :quantitySold, :salePrice);
 -- SELECT
 SELECT * FROM ProductSales WHERE productSaleID = :productSaleID;
 
--- DELETE
-DELETE FROM ProductSales WHERE productSaleID = :productSaleID;
-
--- UPDATE
-UPDATE ProductSales
-SET productID = :productID, orderID = :orderID, quantitySold = :quantitySold, salePrice = :salePrice
-WHERE productSaleID = :productSaleID;
+-- No DELETE or UPDATE operations provided for ProductSales.
 
 -- ProductCategories
 -- CREATE
