@@ -74,36 +74,6 @@
             <input class="btn" type="button" value="Cancel">
         </form> <!-- add new product sale -->
     </div><!-- insert -->
-
-    <div id="update" style="display: block">
-        <form id="editProductSale">
-            <legend><strong>Edit Product Sale</strong></legend>
-            <fieldset class="fields">
-                <label>Product ID</label> <input type="number" name="productID">
-                <label>Order ID</label> <input type="number" name="orderID">
-                <label>Quantity Sold</label> <input type="number" name="quantitySold">
-                <label>Sale Price</label> <input type="text" name="salePrice">
-            </fieldset>
-            <input class="btn" type="submit" id="editProductSale" value="Update Product Sale">
-            <input class="btn" type="button" value="Cancel">
-        </form> <!-- edit product sale -->
-    </div><!-- update -->
-
-    <div id="delete" style="display: block">
-        <form id="deleteProductSale">
-            <legend><strong>Delete Product Sale</strong></legend>
-            <fieldset class="fields">
-                <p>Are you sure you wish to delete the following product sale?</p>
-                <label>ID:</label> <span id="deleteProductSaleID"></span>
-                <label>Product ID:</label> <span id="deleteProductID"></span>
-                <label>Order ID:</label> <span id="deleteOrderID"></span>
-                <label>Quantity Sold:</label> <span id="deleteQuantitySold"></span>
-                <label>Sale Price:</label> <span id="deleteSalePrice"></span>
-            </fieldset>
-            <input class="btn" type="submit" id="deleteProductSale" value="Delete Product Sale">
-            <input class="btn" type="button" value="Cancel" onclick="cancelDeleteProductSale()">
-        </form>
-    </div><!-- delete -->
     
 
 </body>
