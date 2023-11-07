@@ -55,7 +55,7 @@
                 <td>456 Elm St</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td align="right">3</td>
                 <td>Bob</td>
                 <td>Johnson</td>
                 <td>bob.johnson@email.com</td>
@@ -107,9 +107,9 @@
         function searchCustomers() {
             const searchProperty = document.getElementById("searchProperty").value;
             const searchKeyword = document.getElementById("searchKeyword").value.toLowerCase();
+            
 
             const results = customers.filter(customer => customer[searchProperty].toLowerCase().startsWith(searchKeyword));
-
             displayCustomers(results);
         }
 
