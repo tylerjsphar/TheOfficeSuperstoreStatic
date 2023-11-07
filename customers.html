@@ -108,7 +108,7 @@
             const searchProperty = document.getElementById("searchProperty").value;
             const searchKeyword = document.getElementById("searchKeyword").value.toLowerCase();
 
-            const results = customers.filter(customer => customer[searchProperty].toLowerCase().includes(searchKeyword));
+            const results = customers.filter(customer => customer[searchProperty].toLowerCase().startsWith(searchKeyword));
 
             displayCustomers(results);
         }
