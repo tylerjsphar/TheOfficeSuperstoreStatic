@@ -59,8 +59,19 @@
                 <label>Description</label> <input type="text" name="description">
                 <label>Unit Price</label> <input type="text" name="unitPrice">
                 <label>Quantity in Stock</label> <input type="text" name="quantityInStock">
-                <label>Supplier</label> <input type="text" name="supplierID">
-                <label>Category</label> <input type="text" name="categoryID">
+                <label>Supplier:</label>
+                    <select>
+                        <option disabled selected value>- Select -</option>
+                        <option>Office Furnishings Inc.</option>
+                        <option>Tech Office Solutions</option>
+                        <option>Office Tech Suppliers</option>
+                    </select>
+                <label>Category</label>
+                    <select>
+                        <option disabled selected value>- Select -</option>
+                        <option>Electronics</option>
+                        <option>Furniture</option>
+                    </select>
             </fieldset>
             <input class="btn" type="submit" id="addProduct" value="Add a Product">
             <input class="btn" type="button" value="cancel">
@@ -73,7 +84,13 @@
             <fieldset class="fields">
                 <p>Are you sure you wish to delete the following product?</p>
                 <label>ID:</label> <span id="deleteProductID"></span>
-                <label>Product Name:</label> <input type="text" id="deleteProductName">
+                <label>Product Name:</label>
+                    <select>
+                        <option disabled selected value>- Select -</option>
+                        <option>Office Chair</option>
+                        <option>Computer Desk</option>
+                        <option>Printer</option>
+                    </select>
                 <label>Description:</label> <input type="text" id="deleteProductDescription">
                 <label>Unit Price:</label> <input type="text" id="deleteProductUnitPrice">
                 <label>Quantity in Stock:</label> <input type="text" id="deleteProductQuantityInStock">
